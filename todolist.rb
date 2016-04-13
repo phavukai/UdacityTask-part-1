@@ -32,13 +32,24 @@ def print_list
 end
 
 
-def update_item_by_pos(position,status)
+def delete_item(position)
     	#since array are zero based datastructures we rest 1 to the position
     	position -=1
-    	@items[position].update_status(status)
+    	@items.delete_at(position);
     
     end
 
+def update_item(position,status)
+
+	position -=1
+	@items[position].update_status(status)
+end
+
+def prioritize(index, position = 1)
+	@items.insert(position-1, @items.delete_at(index.to_i-1))
+	@items[position.to_i-1]
+	
+end
 
 end
 
