@@ -1,0 +1,5 @@
+#new_features.txt
+
+Feature #1: "Update the position of item. Move it down or up"
+Feature #2: "Save the Todolist in to file"
+Feature #3: "Modify an existing item"

@@ -32,3 +32,8 @@ todo.print_list
 #Prioritize
 todo.prioritize(2,+1)
 todo.print_list
+#Update Item
+todo.update_item_description("PäivitettyTesti","Testi4")
+todo.print_list
+todo.save_file
+
