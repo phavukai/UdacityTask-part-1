@@ -69,7 +69,7 @@ def update_item_description(item_description,old_description)
 #Used to write to save file
 def report_file_puts(line)
 
-	File.open("./report.txt", "a") do |file|
+	File.open("./todolist_save.txt", "a") do |file|
 		file.puts line
 	end
 end
