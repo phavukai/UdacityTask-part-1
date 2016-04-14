@@ -1,0 +1,29 @@
+commit 54dad732a7466fd7dd41702930c35278bb99e03b
+Author: phavukai <petri.havukainen@student.hamk.fi>
+Date:   Thu Apr 14 20:46:39 2016 +0300
+
+    Savefile name change
+
+commit 2c05b8d87d3f81a6dd7ab56dba293e33c7b09666
+Author: phavukai <petri.havukainen@student.hamk.fi>
+Date:   Thu Apr 14 20:35:56 2016 +0300
+
+    Added comments and cleaned the code
+
+commit b60377f7529c1360ad272af6884f6f50c8ed0582
+Author: phavukai <petri.havukainen@student.hamk.fi>
+Date:   Thu Apr 14 20:28:29 2016 +0300
+
+    Added final extra function
+
+commit f50627d3dfbce75b0e7296e34517ff50d43b3001
+Author: phavukai <petri.havukainen@student.hamk.fi>
+Date:   Wed Apr 13 11:39:33 2016 +0300
+
+    Basic functions done and first extra added
+
+commit 86754a504791d9d4cc25c54ec291934e97c81251
+Author: phavukai <petri.havukainen@student.hamk.fi>
+Date:   Wed Apr 13 11:22:21 2016 +0300
+
+    Adding basic functions
