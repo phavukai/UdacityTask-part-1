@@ -39,7 +39,7 @@ def print_list
 
 end
 
-
+#Save todolist to file
 def save_file
 	counter = 1;
 	time  = Time.now.strftime("%d/%m/%Y")
@@ -54,6 +54,7 @@ def save_file
 	end	
 end
 
+#Update the description
 def update_item_description(item_description,old_description)
 
         @items.each do |item|
@@ -65,7 +66,7 @@ def update_item_description(item_description,old_description)
 
     end
 
-
+#Used to write to save file
 def report_file_puts(line)
 
 	File.open("./report.txt", "a") do |file|
@@ -75,27 +76,29 @@ end
 
 
 def delete_item(position)
-    	#since array are zero based datastructures we rest 1 to the position
+    	
     	position -=1
     	@items.delete_at(position);
     
     end
 
+#Update the completion status of item
 def update_item(position,status)
 
 	position -=1
 	@items[position].update_status(status)
 end
 
+#Change the position of existing item
 def prioritize(index, position = 1)
 	@items.insert(position-1, @items.delete_at(index.to_i-1))
 	@items[position.to_i-1]
 		
-end
+	end
 end
 
 class Item
-    # methods and stuff go here
+    
 
   # methods and stuff go here
   	attr_accessor  :completed_status, :description

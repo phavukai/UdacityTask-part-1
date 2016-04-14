@@ -5,10 +5,10 @@ require_relative 'todolist.rb'
 todo = TodoList.new("New Todo List")
 
 # Add four new items
-todo.add_item("Testi1")
-todo.add_item("Testi2")
-todo.add_item("Testi3")
-todo.add_item("Testi4")
+todo.add_item("Test1")
+todo.add_item("Test2")
+todo.add_item("Test3")
+todo.add_item("Test4")
 
 
 # Print the list
@@ -32,8 +32,9 @@ todo.print_list
 #Prioritize
 todo.prioritize(2,+1)
 todo.print_list
-#Update Item
-todo.update_item_description("PäivitettyTesti","Testi4")
+#Update Item description
+todo.update_item_description("UpdatedTest4","Test4")
 todo.print_list
+#Save the todolist to file
 todo.save_file
 
