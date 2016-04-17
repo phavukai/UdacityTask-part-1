@@ -29,13 +29,8 @@ def print_list
 
 	puts @title
 	puts "---------------------------------"
-	
-	counter = 1;
-
-	@items.each do |item|
-		puts "#{counter.to_s} #{item.description}  completion status: #{item.completed_status.to_s}";
-		counter +=1;
-	end 
+	print_items
+	 
 
 end
 
@@ -64,7 +59,16 @@ def update_item_description(item_description,old_description)
             end
         end
 
-    end
+    
+
+def print_items
+
+		@items.each do |item,index|
+                puts "#{index + 1} #{item.description}  completion status: #Completion status: #{item.completed_status.to_s}"
+	end                
+end
+
+
 
 #Used to write to save file
 def report_file_puts(line)
@@ -77,15 +81,15 @@ end
 
 def delete_item(position)
     	
-    	position -=1
-    	@items.delete_at(position);
+    	
+    	@items.delete_at(position - 1)
     
     end
 
 #Update the completion status of item
 def update_item(position,status)
 
-	position -=1
+	position - 1
 	@items[position].update_status(status)
 end
 
@@ -113,20 +117,14 @@ class Item
 
 def update_status(status)
 
-  		@completed_status = status.to_s
-  		puts "-> Item status updated"
+  		@completed_status = true
+  		
   	end
 
 
 
-  	def item_description_equals?(description)
-	  	if @description.eql?(description);
-	  		return true;
-	  	else
-	  		return false;
-	  	end
-  	end
-
+  	def item_description_equals? description
+  		@description.eql? description
+	end
 end
-
-
+end
