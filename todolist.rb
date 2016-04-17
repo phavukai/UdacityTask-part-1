@@ -1,5 +1,3 @@
-
-
 class TodoList
     # methods and stuff go here
 
@@ -29,10 +27,24 @@ def print_list
 
 	puts @title
 	puts "---------------------------------"
+	
 	print_items
+
 	 
 
 end
+
+def print_items
+
+	
+	@items.each_with_index do |item, index|
+		
+                puts "#{index + 1}  #{item.description}  completion status: #{item.completed_status.to_s}";
+	                
+        end
+end
+
+
 
 #Save todolist to file
 def save_file
@@ -59,16 +71,7 @@ def update_item_description(item_description,old_description)
             end
         end
 
-    
-
-def print_items
-
-		@items.each do |item,index|
-                puts "#{index + 1} #{item.description}  completion status: #Completion status: #{item.completed_status.to_s}"
-	end                
-end
-
-
+    end
 
 #Used to write to save file
 def report_file_puts(line)
@@ -82,7 +85,7 @@ end
 def delete_item(position)
     	
     	
-    	@items.delete_at(position - 1)
+    	@items.delete_at(position - 1);
     
     end
 
@@ -118,13 +121,14 @@ class Item
 def update_status(status)
 
   		@completed_status = true
-  		
+  		puts "-> Item status updated"
   	end
 
 
 
   	def item_description_equals? description
-  		@description.eql? description
-	end
+  @description.eql? description
 end
+
 end
+
