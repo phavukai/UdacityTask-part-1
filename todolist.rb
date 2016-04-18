@@ -1,8 +1,8 @@
-class TodoList
+class TodoList 
     # methods and stuff go here
-
+	
 	attr_reader :title, :items
-
+	
 
 
 
@@ -25,24 +25,23 @@ end
 
 def print_list
 
+	
 	puts @title
 	puts "---------------------------------"
-	
-	print_items
+	@items.each_with_index do |item, index|
+		
+                puts "#{index + 1}  #{item.description}  completion status: #{item.completed_status.to_s}";
+	                
+        end	
+		
 
 	 
 
 end
 
-def print_items
+           
 
-	
-	@items.each_with_index do |item, index|
-		
-                puts "#{index + 1}  #{item.description}  completion status: #{item.completed_status.to_s}";
-	                
-        end
-end
+
 
 
 
@@ -104,7 +103,7 @@ def prioritize(index, position = 1)
 	end
 end
 
-class Item
+class Item 
     
 
   # methods and stuff go here
@@ -116,6 +115,12 @@ class Item
     	@completed_status = false
     end
 
+
+ 
+	def print_item       
+       
+	 puts "#{@description} is #{completion_status}"
+  end	
 
 
 def update_status(status)
